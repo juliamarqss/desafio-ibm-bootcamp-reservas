@@ -39,4 +39,8 @@ public class ReservasService {
         novoObj.setStatus(obj.getStatus());
         return reservasRepository.save(novoObj);
     }
+
+    public void delete(Integer id) {
+        reservasRepository.deleteById(id);
+    }
 }

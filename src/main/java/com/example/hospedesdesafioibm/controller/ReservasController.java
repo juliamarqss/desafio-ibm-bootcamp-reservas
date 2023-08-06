@@ -44,4 +44,10 @@ public class ReservasController {
         Reservas novoObj = reservasService.update(obj, id);
         return ResponseEntity.noContent().build();
     }
+
+    @DeleteMapping("/{id}/cancelar")
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
+        reservasService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }
