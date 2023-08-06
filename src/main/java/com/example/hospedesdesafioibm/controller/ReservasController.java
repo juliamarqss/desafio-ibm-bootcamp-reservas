@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @CrossOrigin("*")
 @RestController
@@ -22,5 +23,18 @@ public class ReservasController {
         Reservas obj = reservasService.create(reserva);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(obj.getId()).toUri();
         return ResponseEntity.created(uri).build();
+    }
+
+    @GetMapping
+    @ResponseBody
+    public ResponseEntity<List<Reservas>> findAll() {
+        List<Reservas> list = reservasService.findAll();
+        return ResponseEntity.ok().body(list);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Reservas> findById(@PathVariable Integer id) {
+        Reservas obj = reservasService.findById(id);
+        return ResponseEntity.ok().body(obj);
     }
 }
