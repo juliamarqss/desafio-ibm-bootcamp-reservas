@@ -29,4 +29,14 @@ public class ReservasService {
         Optional<Reservas> obj = reservasRepository.findById(id);
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado: " + id + ", Tipo: " + Reservas.class.getName()));
     }
+
+    public Reservas update(Reservas obj, Integer id) {
+        Reservas novoObj = findById(id);
+        novoObj.setNomeHospede(obj.getNomeHospede());
+        novoObj.setDataInicio(obj.getDataInicio());
+        novoObj.setDataFim(obj.getDataFim());
+        novoObj.setQuantidadePessoas(obj.getQuantidadePessoas());
+        novoObj.setStatus(obj.getStatus());
+        return reservasRepository.save(novoObj);
+    }
 }

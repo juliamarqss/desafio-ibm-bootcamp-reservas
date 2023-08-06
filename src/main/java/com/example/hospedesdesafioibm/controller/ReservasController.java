@@ -37,4 +37,11 @@ public class ReservasController {
         Reservas obj = reservasService.findById(id);
         return ResponseEntity.ok().body(obj);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable Integer id, @RequestBody Reservas obj) {
+        obj.setId(id);
+        Reservas novoObj = reservasService.update(obj, id);
+        return ResponseEntity.noContent().build();
+    }
 }
