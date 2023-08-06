@@ -1,17 +1,10 @@
-package com.example.hospedesdesafioibm.domain;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+package com.example.hospedesdesafioibm.dto;
 
 import java.io.Serializable;
 import java.sql.Date;
 
-@Entity
-public class Reservas implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ReservasDto implements Serializable {
+
     private Integer id;
 
     private String nomeHospede;
@@ -22,12 +15,12 @@ public class Reservas implements Serializable {
 
     private Integer quantidadePessoas;
 
-    private String status = "CONFIRMADA"; // Precisa retornar como "CONFIRMADA" "PENDENTE"
+    private String status = "CONFIRMADA";
 
-    public Reservas() {
+    public ReservasDto() {
     }
 
-    public Reservas(Integer id, String nomeHospede, Date dataInicio, Date dataFim, Integer quantidadePessoas, String status) {
+    public ReservasDto(Integer id, String nomeHospede, Date dataInicio, Date dataFim, Integer quantidadePessoas, String status) {
         this.id = id;
         this.nomeHospede = nomeHospede;
         this.dataInicio = dataInicio;

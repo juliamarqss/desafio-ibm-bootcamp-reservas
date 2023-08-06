@@ -1,6 +1,7 @@
 package com.example.hospedesdesafioibm.controller;
 
 import com.example.hospedesdesafioibm.domain.Reservas;
+import com.example.hospedesdesafioibm.dto.ReservasDto;
 import com.example.hospedesdesafioibm.service.ReservasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -39,9 +40,10 @@ public class ReservasController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> update(@PathVariable Integer id, @RequestBody Reservas obj) {
+    public ResponseEntity<Void> update(@PathVariable Integer id, @RequestBody ReservasDto dto) {
+        Reservas obj = reservasService.fromtDto(dto);
         obj.setId(id);
-        Reservas novoObj = reservasService.update(obj, id);
+        reservasService.update(obj);
         return ResponseEntity.noContent().build();
     }
 
