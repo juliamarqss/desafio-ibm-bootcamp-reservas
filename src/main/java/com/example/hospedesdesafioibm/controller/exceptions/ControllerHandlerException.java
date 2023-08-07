@@ -2,6 +2,7 @@ package com.example.hospedesdesafioibm.controller.exceptions;
 
 import com.example.hospedesdesafioibm.service.exceptions.BadRequestException;
 import com.example.hospedesdesafioibm.service.exceptions.ObjectNotFoundException;
+import com.example.hospedesdesafioibm.service.exceptions.StatusNotFoundException;
 import jakarta.servlet.ServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,12 @@ public class ControllerHandlerException {
 
     @ExceptionHandler(BadRequestException.class)
     public ResponseEntity<StandartError> badRequest(BadRequestException e, ServletRequest request) {
+        StandartError error = new StandartError(System.currentTimeMillis(), HttpStatus.BAD_REQUEST.value(), e.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    }
+
+    @ExceptionHandler(StatusNotFoundException.class)
+    public ResponseEntity<StandartError> statusNotFound(StatusNotFoundException e, ServletRequest request) {
         StandartError error = new StandartError(System.currentTimeMillis(), HttpStatus.BAD_REQUEST.value(), e.getMessage());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }

@@ -1,7 +1,9 @@
 package com.example.hospedesdesafioibm.dto;
 
+import com.example.hospedesdesafioibm.enums.StatusReserva;
+
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 public class ReservasDto implements Serializable {
 
@@ -15,12 +17,12 @@ public class ReservasDto implements Serializable {
 
     private Integer quantidadePessoas;
 
-    private String status = "CONFIRMADA";
+    private StatusReserva status = StatusReserva.CONFIRMADA;
 
     public ReservasDto() {
     }
 
-    public ReservasDto(Integer id, String nomeHospede, Date dataInicio, Date dataFim, Integer quantidadePessoas, String status) {
+    public ReservasDto(Integer id, String nomeHospede, Date dataInicio, Date dataFim, Integer quantidadePessoas, StatusReserva status) {
         this.id = id;
         this.nomeHospede = nomeHospede;
         this.dataInicio = dataInicio;
@@ -69,11 +71,11 @@ public class ReservasDto implements Serializable {
         this.quantidadePessoas = quantidadePessoas;
     }
 
-    public String getStatus() {
+    public StatusReserva getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusReserva status) {
         this.status = status;
     }
 }

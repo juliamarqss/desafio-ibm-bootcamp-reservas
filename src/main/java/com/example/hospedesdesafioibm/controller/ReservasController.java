@@ -2,6 +2,7 @@ package com.example.hospedesdesafioibm.controller;
 
 import com.example.hospedesdesafioibm.domain.Reservas;
 import com.example.hospedesdesafioibm.dto.ReservasDto;
+import com.example.hospedesdesafioibm.enums.StatusReserva;
 import com.example.hospedesdesafioibm.service.ReservasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,9 +22,9 @@ public class ReservasController {
 
     @PostMapping
     public ResponseEntity<Reservas> create(@RequestBody Reservas reserva) {
-        Reservas obj = reservasService.create(reserva);
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(obj.getId()).toUri();
-        return ResponseEntity.created(uri).build();
+        reserva = reservasService.create(reserva);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(reserva.getId()).toUri();
+        return ResponseEntity.created(uri).body(reserva);
     }
 
     @GetMapping
@@ -48,8 +49,10 @@ public class ReservasController {
     }
 
     @DeleteMapping("/{id}/cancelar")
-    public ResponseEntity<Void> delete(@PathVariable Integer id) {
-        reservasService.delete(id);
-        return ResponseEntity.noContent().build();
+    public ResponseEntity<Reservas> delete(@PathVariable Integer id) {
+        Reservas reserva = reservasService.findById(id);
+        reserva.setStatus(StatusReserva.CANCELADA);
+        reservasService.update(reserva);
+        return ResponseEntity.ok().body(reserva);
     }
 }

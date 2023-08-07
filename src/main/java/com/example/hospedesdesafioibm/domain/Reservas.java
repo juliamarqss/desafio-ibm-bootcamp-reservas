@@ -1,12 +1,15 @@
 package com.example.hospedesdesafioibm.domain;
 
+import com.example.hospedesdesafioibm.enums.StatusReserva;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
+
 
 @Entity
 public class Reservas implements Serializable {
@@ -16,18 +19,20 @@ public class Reservas implements Serializable {
 
     private String nomeHospede;
 
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dataInicio;
 
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dataFim;
 
     private Integer quantidadePessoas;
 
-    private String status = "CONFIRMADA"; // Precisa retornar como "CONFIRMADA" "PENDENTE"
+    private StatusReserva status = StatusReserva.CONFIRMADA;
 
     public Reservas() {
     }
 
-    public Reservas(Integer id, String nomeHospede, Date dataInicio, Date dataFim, Integer quantidadePessoas, String status) {
+    public Reservas(Integer id, String nomeHospede, Date dataInicio, Date dataFim, Integer quantidadePessoas, StatusReserva status) {
         this.id = id;
         this.nomeHospede = nomeHospede;
         this.dataInicio = dataInicio;
@@ -76,11 +81,11 @@ public class Reservas implements Serializable {
         this.quantidadePessoas = quantidadePessoas;
     }
 
-    public String getStatus() {
+    public StatusReserva getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StatusReserva status) {
         this.status = status;
     }
 }

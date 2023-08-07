@@ -25,6 +25,7 @@ public class ReservasService {
         if(inicio.before(new Date())) {
             throw new BadRequestException("A data de início deve ser após a data atual.");
         }
+
         if(fim.before(inicio)) {
             throw new BadRequestException("A data final deve ser após a data inicial.");
         }
@@ -44,13 +45,10 @@ public class ReservasService {
     }
 
     public Reservas update(Reservas obj) {
+//        validateDate(obj);
         Reservas novoObj = findById(obj.getId());
         updateData(novoObj, obj);
         return reservasRepository.save(novoObj);
-    }
-
-    public void delete(Integer id) {
-        reservasRepository.deleteById(id);
     }
 
     private void updateData(Reservas novo, Reservas antigo) {
