@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Reserves } from '../models/reserve.model';
 import { ReserveService } from '../services/reserve.service';
 
