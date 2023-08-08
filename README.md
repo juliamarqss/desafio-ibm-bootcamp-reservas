@@ -33,10 +33,7 @@ Você precisa ter Java e Mavem instalados e configurados localmente.
 
 Abra o projeto `backend` na sua IDE favorita como projeto Maven e execute como aplicação Spring Boot.
 
-Você pode verificar se 
-http://localhost:8080/h2-console
-
-http://localhost:8080/
+Você pode verificar se o projeto está funcionando acessando a porta http://localhost:8080 e o H2 Database na http://localhost:8080/h2-console.
 
 ### Executando o front-end
 Você precisará ter Node.js / NPM instalados localmente.
