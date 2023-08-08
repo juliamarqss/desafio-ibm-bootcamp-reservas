@@ -2,7 +2,9 @@
 ![Java Build](https://github.com/loiane/crud-angular-spring/actions/workflows/maven.yml/badge.svg?branch=main)
 ![Angular Build](https://github.com/loiane/crud-angular-spring/actions/workflows/angular.yml/badge.svg?branch=main)
 
-O desafio é criar uma aplicação que permita que hóspedes façam reservas em uma casa de temporada através de uma API Rest. Projeto feito com Angular + Spring Boot.
+O desafio é criar uma aplicação que permita que hóspedes façam reservas em uma casa de temporada através de uma API Rest. 
+
+O projeto é um CRUD com Angular + Spring Boot.
 
 ![image](https://github.com/juliamarqss/desafio-ibm-bootcamp-reservas/assets/99684837/33e3200c-e620-42ec-a124-4e2d9577c037)
 
@@ -21,7 +23,7 @@ O desafio é criar uma aplicação que permita que hóspedes façam reservas em 
   - H2 Database
 
 ## 📝 Documentação 
-
+Em desenvolvimento.
 
 ## ❗️Executando o código localmente
 
@@ -55,4 +57,4 @@ Esse comando irá rodar o projeto Angular com um proxy para o servidor Java.
 
 Abra seu browser e acesse a 🚪 http://localhost:4200 (porta padrão do Angular).
 
-#### **Projeto desenvolvido por [Júlia Marques]("https://www.linkedin.com/in/marques-julia/") 🚀**
+Desenvolvido por: [Júlia Marques](https://www.linkedin.com/in/marques-julia/).
