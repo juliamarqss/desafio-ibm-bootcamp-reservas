@@ -2,10 +2,7 @@ package com.example.hospedesdesafioibm.domain;
 
 import com.example.hospedesdesafioibm.enums.StatusReserva;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -17,16 +14,21 @@ public class Reservas implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(length = 200, nullable = false)
     private String nomeHospede;
 
+    @Column(nullable = false)
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dataInicio;
 
+    @Column(nullable = false)
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dataFim;
 
+    @Column(nullable = false)
     private Integer quantidadePessoas;
 
+    @Column(nullable = false)
     private StatusReserva status = StatusReserva.CONFIRMADA;
 
     public Reservas() {
