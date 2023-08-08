@@ -1,0 +1,16 @@
+<main class="main">
+  <button
+    (click)="onClick()"
+    mat-raised-button
+    class="button-primary"
+    type="button"
+  >
+    {{displayElement ? "Nova Reserva": "Fechar"}}  <mat-icon>add</mat-icon>
+  </button>
+</main>
+
+<ng-container *ngIf="visible">
+  <app-create-reserve></app-create-reserve>
+</ng-container>
+
+<app-read-reserve></app-read-reserve>
