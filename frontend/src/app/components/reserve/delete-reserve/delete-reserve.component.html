@@ -1,0 +1,69 @@
+<mat-card class="delete-reserve">
+  <mat-card-title>
+    Apagar Reserva
+    <mat-icon class="middle">delete</mat-icon>
+  </mat-card-title>
+
+  <form class="form">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nome do hóspede</mat-label>
+      <input matInput placeholder="Nome" [(ngModel)]="reserves.nomeHospede" name="nome" disabled/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Hóspedes</mat-label>
+      <input
+        matInput
+        placeholder="Hospedes"
+        [(ngModel)]="reserves.quantidadePessoas"
+        name="quantidade_hospedes"
+        disabled
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Data do check-in</mat-label>
+      <input
+        type="date"
+        matInput
+        placeholder="Data do check-in"
+        [(ngModel)]="reserves.dataInicio"
+        name="data_do_checkin"
+        disabled
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Data do checkout</mat-label>
+      <input
+        type="date"
+        matInput
+        placeholder="Data do checkout"
+        [(ngModel)]="reserves.dataFim"
+        name="data_do_checkout"
+        disabled
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Status</mat-label>
+      <input
+        matInput
+        placeholder="Status"
+        [(ngModel)]="reserves.status"
+        name="status"
+        disabled
+      />
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button color="warn" (click)="deleteReserve()">
+    Apagar Reserva
+    <mat-icon class="middle">delete</mat-icon>
+  </button>
+
+  <button mat-raised-button class="button-primary" (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>
