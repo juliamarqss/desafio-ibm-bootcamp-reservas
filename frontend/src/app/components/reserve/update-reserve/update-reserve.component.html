@@ -1,0 +1,70 @@
+<mat-card class="update-reserve">
+  <mat-card-title>
+    Atualizar Reserva
+    <mat-icon class="middle">update</mat-icon>
+  </mat-card-title>
+
+  <form class="form">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nome do hóspede</mat-label>
+      <input matInput required placeholder="Nome" [(ngModel)]="reserves.nomeHospede" name="nome"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Hóspedes</mat-label>
+      <input
+        required
+        matInput
+        placeholder="Hospedes"
+        [(ngModel)]="reserves.quantidadePessoas"
+        name="quantidade_hospedes"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Data do check-in</mat-label>
+      <input
+        required
+        type="date"
+        matInput
+        placeholder="Data do check-in"
+        [(ngModel)]="reserves.dataInicio"
+        name="data_do_checkin"
+        formtarget="aaa"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Data do checkout</mat-label>
+      <input
+        required
+        type="date"
+        matInput
+        placeholder="Data do checkout"
+        [(ngModel)]="reserves.dataFim"
+        name="data_do_checkout"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Status</mat-label>
+      <input
+        required
+        matInput
+        placeholder="Status"
+        [(ngModel)]="reserves.status"
+        name="status"
+      />
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button color="primary" (click)="updateReserve()">
+    Atualizar
+    <mat-icon class="middle">edit</mat-icon>
+  </button>
+
+  <button mat-raised-button class="button-primary" color="warn" (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>

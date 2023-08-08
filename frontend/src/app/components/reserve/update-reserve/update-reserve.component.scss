@@ -1,0 +1,15 @@
+.update-reserve {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  margin: 1rem auto;
+  padding: 2%;
+
+  max-width: 700px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+}
