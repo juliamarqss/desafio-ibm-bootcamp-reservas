@@ -2,7 +2,7 @@
   <mat-card class="mat-elevation-z8" *ngFor="let item of reserves">
     <mat-card-header>
       <mat-card-title>NOME: {{ item.nomeHospede.toUpperCase() }}</mat-card-title>
-      <mat-card-subtitle>HOSPEDES: {{ item.quantidadePessoas }}</mat-card-subtitle>
+      <mat-card-subtitle>HOSPEDES: {{ qtdHospedes(item.quantidadePessoas) }}</mat-card-subtitle>
       <mat-card-subtitle>CHECK-IN: {{item.dataInicio | date: "dd/MM/yyyy"}}</mat-card-subtitle>
       <mat-card-subtitle>CHECKOUT: {{item.dataFim | date: "dd/MM/yyyy"}}</mat-card-subtitle>
       <mat-card-subtitle class="status">STATUS: {{item.status}}</mat-card-subtitle>

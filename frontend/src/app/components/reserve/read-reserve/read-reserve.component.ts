@@ -31,4 +31,14 @@ export class ReadReserveComponent implements OnInit{
         : (this.destroyComponent = false);
     });
   }
+
+  qtdHospedes(qtd: number): String {
+    if(qtd > 1) {
+      var mensagem = `${qtd} HOSPEDES`;
+      return mensagem;
+    }
+
+    var umHospede = "1 HOSPEDE";
+    return umHospede;
+  }
 }
