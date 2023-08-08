@@ -5,46 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca240371-1874-4b65-9747-f5d9019d4889" name="Changes" comment="feat: criando o repository ReservasRepository">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/HospedesDesafioIbmApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/controller/ReservasController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/controller/exceptions/ControllerHandlerException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/controller/exceptions/StandartError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/domain/Reservas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/dto/ReservasDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/enums/StatusReserva.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/repository/ReservasRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/service/ReservasService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/service/exceptions/BadRequestException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/service/exceptions/ObjectNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/example/hospedesdesafioibm/service/exceptions/StatusNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/test/java/com/example/hospedesdesafioibm/HospedesDesafioIbmApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/HospedesDesafioIbmApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/controller/ReservasController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/controller/exceptions/ControllerHandlerException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/controller/exceptions/StandartError.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/domain/Reservas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/dto/ReservasDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/enums/StatusReserva.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/repository/ReservasRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/service/ReservasService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/service/exceptions/BadRequestException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/service/exceptions/ObjectNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/com/example/hospedesdesafioibm/service/exceptions/StatusNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
