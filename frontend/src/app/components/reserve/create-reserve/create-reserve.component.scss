@@ -1,0 +1,21 @@
+.create {
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 1.5rem;
+}
+
+.create-reserve {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  // margin: 1rem auto;
+  padding: 2%;
+
+  // max-width: 700px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+}

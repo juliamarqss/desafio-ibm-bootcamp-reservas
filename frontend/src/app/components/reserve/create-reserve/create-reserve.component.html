@@ -1,0 +1,55 @@
+<main class="create">
+  <mat-card class="create-reserve">
+    <mat-card-title>
+      Cadastrar Reserva
+      <mat-icon class="middle">create</mat-icon>
+    </mat-card-title>
+
+    <form class="form">
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nome do hóspede</mat-label>
+        <input matInput placeholder="Nome" [(ngModel)]="reserves.nomeHospede" name="nome"/>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Hóspedes</mat-label>
+        <input
+          matInput
+          placeholder="Hospedes"
+          [(ngModel)]="reserves.quantidadePessoas"
+          name="quantidade_hospedes"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Data do check-in</mat-label>
+        <input
+          type="date"
+          matInput
+          placeholder="Data do check-in"
+          [(ngModel)]="reserves.dataInicio"
+          name="data_do_checkin"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Data do checkout</mat-label>
+        <input
+          type="date"
+          matInput
+          placeholder="Data do checkout"
+          [(ngModel)]="reserves.dataFim"
+          name="data_do_checkout"
+        />
+      </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button color="primary" (click)="createReserve()">
+      Cadastrar
+      <mat-icon class="middle">create</mat-icon>
+    </button>
+    
+  </mat-card>
+</main>
